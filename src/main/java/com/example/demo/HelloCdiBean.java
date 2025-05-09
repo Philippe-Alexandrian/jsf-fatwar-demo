@@ -14,12 +14,12 @@ public class HelloCdiBean {
   private static final Logger logger = LoggerFactory.getLogger(HelloCdiBean.class);
 
   @Inject
-  @ManagedProperty(value = "#{helloSpringBean}")
-  private HelloSpringBean helloSpringBean;
+  @ManagedProperty(value = "#{helloSpringBeanSingleton}")
+  private HelloSpringBeanSingleton helloSpringBeanSingleton;
 
   public String getMessage() {
     logger.debug("Get message from Spring Bean");
-    return helloSpringBean.getMessage();
+    return helloSpringBeanSingleton.getMessage();
   }
 
   public String next() {

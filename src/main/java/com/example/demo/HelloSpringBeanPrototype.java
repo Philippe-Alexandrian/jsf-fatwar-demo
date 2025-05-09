@@ -25,4 +25,8 @@ public class HelloSpringBeanPrototype {
     return "HelloSpringBeanPrototype" + count;
   }
 
+  public String next() {
+    return "number";
+  }
+
 }

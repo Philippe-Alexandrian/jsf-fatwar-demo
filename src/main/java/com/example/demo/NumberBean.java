@@ -1,11 +1,8 @@
 package com.example.demo;
 
 import jakarta.enterprise.context.RequestScoped;
-import jakarta.inject.Named;
 import org.springframework.stereotype.Component;
 
-// TODO A Supprimer ?
-@Named
 @Component
 @RequestScoped
 public class NumberBean {
@@ -21,7 +18,7 @@ public class NumberBean {
   }
 
   public String submit() {
-    return "hello";
+    return "hello?faces-redirect=true";
   }
 
 }

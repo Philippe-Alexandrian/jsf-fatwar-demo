@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="https://jakarta.ee/xml/ns/jakartaee">
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
 <h:head>
-  <title>Bienvenue</title>
+  <title>Number</title>
 </h:head>
 <h:body>
 
     <h:form>
-        <h:outputLabel for="number" value="Entrez un nombre : " />
+        <h:outputLabel for="number" value="Number : " />
         <h:inputText id="number" size="4" value="#{numberBean.number}" validator="#{numberValidator.validate}">
         </h:inputText>
-        <h:commandButton value="Envoyer" action="#{numberBean.submit()}" />
+        <h:commandButton value="Submit" action="#{numberBean.submit()}" />
         <h:messages globalOnly="true" />
     </h:form>
 

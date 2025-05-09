@@ -33,11 +33,11 @@ public class DemoApplication extends SpringBootServletInitializer {
     return servletContext -> {
       servletContext.setInitParameter("jakarta.faces.PROJECT_STAGE", "Development");
 
-      // TODO A Supprimer ?
-      // servletContext.addServlet("FacesServlet", new FacesServlet()).addMapping("*.xhtml");
-      ServletRegistration.Dynamic facesServlet = servletContext.addServlet("FacesServlet", FacesServlet.class);
-      facesServlet.setLoadOnStartup(1);
-      facesServlet.addMapping("*.xhtml");
+      // Better register manually and immediately FacesServlet than uses @FacesConfig
+      // And ensure that in any cases, FacesServlet will registered.
+      ServletRegistration.Dynamic facesServletRegistration = servletContext.addServlet("FacesServlet", new FacesServlet());
+      facesServletRegistration.setLoadOnStartup(1);
+      facesServletRegistration.addMapping("*.xhtml");
 
       // @HINT Needed in order to have CDI working into springboot fat war context.
       EnhancedListener cdiInitializer = new EnhancedListener();
@@ -50,7 +50,7 @@ public class DemoApplication extends SpringBootServletInitializer {
     };
   }
 
-  // JSF servlet regitration.
+  // JSF servlet configuration.
   @Bean
   ServletListenerRegistrationBean<ConfigureListener> configureListener() {
     return new ServletListenerRegistrationBean<>(new ConfigureListener());

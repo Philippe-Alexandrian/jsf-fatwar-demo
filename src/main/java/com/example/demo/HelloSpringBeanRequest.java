@@ -24,4 +24,8 @@ public class HelloSpringBeanRequest {
     return "HelloSpringBeanRequest" + count;
   }
 
+  public String next() {
+    return "number";
+  }
+
 }
