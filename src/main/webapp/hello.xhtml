@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="https://jakarta.ee/xml/ns/jakartaee">
+<h:head>
+  <title>Bienvenue</title>
+</h:head>
+<h:body>
+    <h1>#{helloCdiBean.message}</h1>
+    <h1>#{helloSpringBean.message}</h1>
+    <h1>#{helloSpringBeanPrototype.message}</h1>
+    <h1>#{helloSpringBeanRequest.message}</h1>
+    <h1>#{helloSpringBeanSession.message}</h1>
+    <h1>#{helloSpringBeanSingleton.message}</h1>
+
+    <h:form>
+        <h:commandLink value="next" action="#{helloCdiBean.next()}" />
+    </h:form>
+
+</h:body>
+
+</html>

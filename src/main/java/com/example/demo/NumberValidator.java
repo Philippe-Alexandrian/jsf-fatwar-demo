@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.validator.FacesValidator;
+import jakarta.faces.validator.Validator;
+import jakarta.faces.validator.ValidatorException;
+
+@FacesValidator("numberValidator")
+public class NumberValidator implements Validator<Integer> {
+
+  @Override
+  public void validate(FacesContext context, UIComponent component, Integer value) throws ValidatorException {
+    if (value != null && value >= 10) {
+      throw new ValidatorException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Validation fail", null));
+    }
+  }
+
+}
