@@ -23,7 +23,7 @@ public class HelloCdiBean {
   }
 
   public String next() {
-    return "number";
+    return "digit";
   }
 
 }

@@ -25,7 +25,7 @@ public class HelloSpringBeanSession {
   }
 
   public String next() {
-    return "number";
+    return "digit";
   }
 
 }

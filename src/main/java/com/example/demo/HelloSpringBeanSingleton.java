@@ -23,7 +23,7 @@ public class HelloSpringBeanSingleton {
   }
 
   public String next() {
-    return "number";
+    return "digit";
   }
 
 }

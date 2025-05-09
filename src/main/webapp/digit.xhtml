@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+    <title>Digit</title>
+    <h:outputStylesheet name="css/style.css"/>
+</h:head>
+
+<h:body>
+
+    <div class="container">
+        <h1>Enter a digit</h1>
+
+        <!-- Conteneur pour l'input et le bouton -->
+        <div class="form-container">
+            <h:form class="digit-form">
+                <h:outputLabel for="digit" value="Digit : " />
+                <h:inputText id="digit" size="4" value="#{digitBean.digit}" validator="#{digitValidator.validate}" />
+                <h:message for="digit" styleClass="error-message"/>
+                
+                <h:commandButton value="Submit" action="#{digitBean.submit()}" class="submit-button" />
+            </h:form>
+        </div>
+
+        <h:messages globalOnly="true" styleClass="global-messages" />
+    </div>
+
+</h:body>
+
+</html>

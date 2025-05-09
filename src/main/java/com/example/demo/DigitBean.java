@@ -5,16 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequestScoped
-public class NumberBean {
+public class DigitBean {
 
-  private Integer number;
+  private Integer digit;
 
-  public Integer getNumber() {
-    return number;
+  public Integer getDigit() {
+    return digit;
   }
 
-  public void setNumber(Integer number) {
-    this.number = number;
+  public void setDigit(Integer digit) {
+    this.digit = digit;
   }
 
   public String submit() {

@@ -39,7 +39,7 @@ public class DemoApplication extends SpringBootServletInitializer {
       facesServletRegistration.setLoadOnStartup(1);
       facesServletRegistration.addMapping("*.xhtml");
 
-      // @HINT Needed in order to have CDI working into springboot fat war context.
+      // @HINT Needed in order to have CDI working in springboot fat war context.
       EnhancedListener cdiInitializer = new EnhancedListener();
       cdiInitializer.onStartup(null, servletContext);
 

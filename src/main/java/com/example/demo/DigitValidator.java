@@ -7,12 +7,12 @@ import jakarta.faces.validator.Validator;
 import jakarta.faces.validator.ValidatorException;
 import org.springframework.stereotype.Component;
 
-@Component("numberValidator")
-public class NumberValidator implements Validator<Integer> {
+@Component("digitValidator")
+public class DigitValidator implements Validator<Integer> {
 
   @Override
   public void validate(FacesContext context, UIComponent component, Integer value) throws ValidatorException {
-    if (value != null && value >= 10) {
+    if (value != null && (value < 0 || value > 9)) {
       throw new ValidatorException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Validation fail", null));
     }
   }

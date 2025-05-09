@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
-      xmlns:f="jakarta.faces.core"
-      xmlns:ui="jakarta.faces.facelets">
+      xmlns:f="jakarta.faces.core">
 <h:head>
-  <title>Hello</title>
+    <title>Hello</title>
+    <h:outputStylesheet name="css/style.css" />
 </h:head>
 <h:body>
-    <h1>#{helloCdiBean.message}</h1>
-    <h:form>
-        <h:commandLink value="next" action="#{helloCdiBean.next()}" />
-    </h:form>
-    <h1>#{helloSpringBeanPrototype.message}</h1>
-    <h:form>
-        <h:commandLink value="next" action="#{helloSpringBeanPrototype.next()}" />
-    </h:form>
-    <h1>#{helloSpringBeanRequest.message}</h1>
-    <h:form>
-        <h:commandLink value="next" action="#{helloSpringBeanRequest.next()}" />
-    </h:form>
-    <h1>#{helloSpringBeanSession.message}</h1>
-    <h:form>
-        <h:commandLink value="next" action="#{helloSpringBeanSession.next()}" />
-    </h:form>
-    <h1>#{helloSpringBeanSingleton.message}</h1>
-    <h:form>
-        <h:commandLink value="next" action="#{helloSpringBeanSingleton.next()}" />
-    </h:form>
+    <div class="container">
+        <div class="bean-block">
+            <h2>CDI Bean</h2>
+            <h:outputText value="#{helloCdiBean.message}" styleClass="message" />
+            <h:form>
+                <h:commandLink value="Next" action="#{helloCdiBean.next()}" styleClass="link-button" />
+            </h:form>
+        </div>
 
+        <div class="bean-block">
+            <h2>Spring Prototype</h2>
+            <h:outputText value="#{helloSpringBeanPrototype.message}" styleClass="message" />
+            <h:form>
+                <h:commandLink value="Next" action="#{helloSpringBeanPrototype.next()}" styleClass="link-button" />
+            </h:form>
+        </div>
+
+        <div class="bean-block">
+            <h2>Spring Request</h2>
+            <h:outputText value="#{helloSpringBeanRequest.message}" styleClass="message" />
+            <h:form>
+                <h:commandLink value="Next" action="#{helloSpringBeanRequest.next()}" styleClass="link-button" />
+            </h:form>
+        </div>
+
+        <div class="bean-block">
+            <h2>Spring Session</h2>
+            <h:outputText value="#{helloSpringBeanSession.message}" styleClass="message" />
+            <h:form>
+                <h:commandLink value="Next" action="#{helloSpringBeanSession.next()}" styleClass="link-button" />
+            </h:form>
+        </div>
+
+        <div class="bean-block">
+            <h2>Spring Singleton</h2>
+            <h:outputText value="#{helloSpringBeanSingleton.message}" styleClass="message" />
+            <h:form>
+                <h:commandLink value="Next" action="#{helloSpringBeanSingleton.next()}" styleClass="link-button" />
+            </h:form>
+        </div>
+    </div>
 </h:body>
-
 </html>
