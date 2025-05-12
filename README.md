@@ -74,6 +74,11 @@ src
 │           └── faces-config.xml # Faces config file
 ```
 
+## Alternative branch
+
+There is an alternative branch named `only-spring-beans` that does not include any CDI beans,  
+making the configuration slightly simpler.
+
 ## License
 
 This project is released into the public domain. You are free to use, modify, and distribute it without restriction.
