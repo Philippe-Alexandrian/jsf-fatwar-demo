@@ -1,4 +1,3 @@
----
 # jsf-fatwar-demo
 
 This project is a **demonstration of the integration of modern Jakarta EE and Spring technologies**, including:
@@ -11,7 +10,6 @@ This project is a **demonstration of the integration of modern Jakarta EE and Sp
 - **Tomcat 10.1 (embedded)**
 - Packaged as a **fat WAR**
 
----
 ## Features
 
 - Runs JSF 4 pages inside a Spring Boot 3 application.
@@ -21,7 +19,6 @@ This project is a **demonstration of the integration of modern Jakarta EE and Sp
 - Simple navigation between pages and form validation.
 - Designed to run on an embedded Tomcat 10.1 server.
 
----
 ## Build the Project
 
 Build the project using Maven:
@@ -32,7 +29,6 @@ mvn clean package
 
 This will generate a `jsf-fatwar-demo.war` file in the `target/` directory.
 
----
 ## How to Run
 
 You can run the application in one of two ways:
@@ -49,14 +45,12 @@ mvn spring-boot:run
 java -jar target/jsf-fatwar-demo.war
 ```
 
----
 ## Accessing the Application
 
 Once the application is running, open your browser and navigate to:
 
 [http://localhost:8080/demo/hello.xhtml](http://localhost:8080/demo/hello.xhtml)
 
----
 ## Project Structure
 
 ```
@@ -79,8 +73,6 @@ src
 │       └── WEB-INF
 │           └── faces-config.xml # Faces config file
 ```
-
----
 
 ## License
 
