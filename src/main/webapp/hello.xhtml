@@ -8,11 +8,20 @@
 </h:head>
 <h:body>
     <div class="container">
+
         <div class="bean-block">
-            <h2>CDI Bean</h2>
-            <h:outputText value="#{helloCdiBean.message}" styleClass="message" />
+            <h2>CDI Request</h2>
+			<h:outputText value="#{helloCdiBeanRequest.message}" styleClass="message" />
+			<h:form>
+                <h:commandLink value="Next" action="#{helloCdiBeanRequest.next()}" styleClass="link-button" />
+            </h:form>
+        </div>
+
+        <div class="bean-block">
+            <h2>CDI Session</h2>
+            <h:outputText value="#{helloCdiBeanSession.message}" styleClass="message" />
             <h:form>
-                <h:commandLink value="Next" action="#{helloCdiBean.next()}" styleClass="link-button" />
+                <h:commandLink value="Next" action="#{helloCdiBeanSession.next()}" styleClass="link-button" />
             </h:form>
         </div>
 

@@ -1,10 +1,10 @@
 package com.example.demo.beans;
 
-import jakarta.enterprise.context.RequestScoped;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Component
-@RequestScoped
+@RequestScope
 public class DigitBean {
 
   private Integer digit;

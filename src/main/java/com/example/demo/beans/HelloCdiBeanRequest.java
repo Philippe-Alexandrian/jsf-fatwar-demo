@@ -9,9 +9,11 @@ import org.slf4j.LoggerFactory;
 
 @Named
 @RequestScoped
-public class HelloCdiBean {
+public class HelloCdiBeanRequest {
 
-  private static final Logger logger = LoggerFactory.getLogger(HelloCdiBean.class);
+  private static final Logger logger = LoggerFactory.getLogger(HelloCdiBeanRequest.class);
+
+  private Integer count = 0;
 
   @Inject
   @ManagedProperty(value = "#{helloSpringBeanSingleton}")
@@ -19,7 +21,8 @@ public class HelloCdiBean {
 
   public String getMessage() {
     logger.debug("Get message from Spring Bean");
-    return helloSpringBeanSingleton.getMessage();
+    count = count + 1;
+    return helloSpringBeanSingleton.getMessage() + count;
   }
 
   public String next() {
