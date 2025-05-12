@@ -21,7 +21,7 @@ public class JsfConfig {
       servletContext.setInitParameter("jakarta.faces.PROJECT_STAGE", "Development");
 
       // Better register manually and immediately FacesServlet than uses @FacesConfig
-      // And ensure that in any cases, FacesServlet will registered.
+      // And ensure that in any cases, FacesServlet will register.
       ServletRegistration.Dynamic facesServletRegistration = servletContext.addServlet("FacesServlet", new FacesServlet());
       facesServletRegistration.setLoadOnStartup(1);
       facesServletRegistration.addMapping("*.xhtml");
