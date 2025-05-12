@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.beans;
 
 import jakarta.enterprise.context.RequestScoped;
 import org.springframework.stereotype.Component;

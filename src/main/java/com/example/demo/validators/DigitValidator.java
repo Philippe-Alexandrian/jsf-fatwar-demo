@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.validators;
 
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.component.UIComponent;

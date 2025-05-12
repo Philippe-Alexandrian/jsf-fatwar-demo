@@ -7,7 +7,7 @@
                         https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd"
     version="4.0">
 
-    <!-- Needed to solve Spring bean into Cdi bean. -->
+    <!-- Needed to solve beans into xhtml files. -->
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 	</application>

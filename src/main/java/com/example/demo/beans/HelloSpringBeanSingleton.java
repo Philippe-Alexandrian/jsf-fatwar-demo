@@ -1,27 +1,25 @@
-package com.example.demo;
+package com.example.demo.beans;
 
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.RequestScope;
 
 @Component
-@RequestScope
-public class HelloSpringBeanRequest {
+public class HelloSpringBeanSingleton {
 
-  private static final Logger logger = LoggerFactory.getLogger(HelloSpringBeanRequest.class);
+  private static final Logger logger = LoggerFactory.getLogger(HelloSpringBeanSingleton.class);
 
   private Integer count = 0;
 
   @PostConstruct
   public void init() {
-    logger.debug("HelloSpringBeanRequest@PostConstruct");
+    logger.debug("HelloSpringBeanSingleton@PostConstruct");
   }
 
   public String getMessage() {
     count = count + 1;
-    return "HelloSpringBeanRequest" + count;
+    return "HelloSpringBeanSingleton" + count;
   }
 
   public String next() {

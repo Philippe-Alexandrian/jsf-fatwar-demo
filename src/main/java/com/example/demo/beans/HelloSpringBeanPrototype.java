@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.beans;
 
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;

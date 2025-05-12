@@ -1,0 +1,14 @@
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n'
+  file:
+    name: jsf-fatwar-demo.log
+  level:
+    com:
+      example:
+        demo: DEBUG
+    root: DEBUG
+
+server:
+  servlet:
+    context-path: /demo
