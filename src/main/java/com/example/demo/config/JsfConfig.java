@@ -11,7 +11,6 @@ import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.RequestContextListener;
-import org.springframework.web.jsf.el.SpringBeanFacesELResolver;
 
 @Configuration
 public class JsfConfig {
@@ -34,7 +33,6 @@ public class JsfConfig {
       // JSF initializer.
       ServletContainerInitializer facesInitializer = new FacesInitializer();
       facesInitializer.onStartup(null, servletContext);
-
     };
   }
 
@@ -47,12 +45,6 @@ public class JsfConfig {
   @Bean
   ServletListenerRegistrationBean<RequestContextListener> requestContextListener() {
     return new ServletListenerRegistrationBean<>(new RequestContextListener());
-  }
-
-  // TODO Needed ?
-  @Bean
-  SpringBeanFacesELResolver springBeanFacesELResolver() {
-    return new SpringBeanFacesELResolver();
   }
 
 }
