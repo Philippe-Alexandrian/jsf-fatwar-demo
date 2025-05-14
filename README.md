@@ -5,7 +5,7 @@ This project is a **demonstration of the integration of modern Jakarta EE and Sp
 - **Java 17**
 - **Spring Boot 3**
 - **Jakarta Faces (JSF) 4**
-- **Jakarta CDI 4**
+- **CDI 4**
 - **Servlet 6**
 - **Tomcat 10.1 (embedded)**
 - Packaged as a **fat WAR**
@@ -86,3 +86,7 @@ making the configuration slightly simpler.
 ## License
 
 This project is released into the public domain. You are free to use, modify, and distribute it without restriction.
+
+## 🏷️ Keywords / Tags
+
+Java 17 • Spring Boot 3 • JSF 4 • Jakarta Faces 4 • CDI 4 • Servlet 6 • Tomcat 10.1 (embedded) • fat WAR
