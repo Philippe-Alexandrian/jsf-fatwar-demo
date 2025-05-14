@@ -19,6 +19,10 @@ This project is a **demonstration of the integration of modern Jakarta EE and Sp
 - Simple navigation between pages and form validation.
 - Designed to run on an embedded Tomcat 10.1 server.
 
+## Additional feature
+
+- Add a custom view scope in a spring context.
+
 ## Build the Project
 
 Build the project using Maven:

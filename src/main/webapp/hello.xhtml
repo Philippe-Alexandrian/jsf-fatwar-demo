@@ -2,45 +2,102 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
       xmlns:f="jakarta.faces.core">
+
 <h:head>
-    <title>Hello</title>
-    <h:outputStylesheet name="css/style.css" />
+	<title>Hello</title>
+	<h:outputStylesheet name="css/style.css" />
 </h:head>
+
 <h:body>
-    <div class="container">
+	<div class="container">
 
-        <div class="bean-block">
-            <h2>Spring Prototype</h2>
-            <h:outputText value="#{helloSpringBeanPrototype.message}" styleClass="message" />
-            <h:form>
-                <h:commandLink value="Next" action="#{helloSpringBeanPrototype.next()}" styleClass="link-button" />
-            </h:form>
-        </div>
+		<div class="bean-block">
+			<h2>Spring Prototype</h2>
+			<h:form>
+				<h:outputLabel for="input" value="Type something: " />
+				<h:inputText id="input" value="#{helloSpringBeanPrototype.input}" />
+				<h:commandButton value="Submit" action="#{helloSpringBeanPrototype.submit}">
+					<f:ajax execute="@form" render="helloSpringBeanPrototypeOutput helloSpringBeanPrototypeCount" />
+				</h:commandButton>
+			</h:form>
+			<p>
+				<h:outputText id="helloSpringBeanPrototypeOutput" value="Output: #{helloSpringBeanPrototype.output}" />
+			</p>
+			<p>
+				<h:outputText id="helloSpringBeanPrototypeCount" value="Count: #{helloSpringBeanPrototype.count}" />
+			</p>
+		</div>
 
-        <div class="bean-block">
-            <h2>Spring Request</h2>
-            <h:outputText value="#{helloSpringBeanRequest.message}" styleClass="message" />
-            <h:form>
-                <h:commandLink value="Next" action="#{helloSpringBeanRequest.next()}" styleClass="link-button" />
-            </h:form>
-        </div>
+		<div class="bean-block">
+			<h2>Spring Request</h2>
+			<h:form>
+				<h:outputLabel for="input" value="Type something: " />
+				<h:inputText id="input" value="#{helloSpringBeanRequest.input}" />
+				<h:commandButton value="Submit" action="#{helloSpringBeanRequest.submit}">
+					<f:ajax execute="@form" render="helloSpringBeanRequestOutput helloSpringBeanRequestCount" />
+				</h:commandButton>
+			</h:form>
+			<p>
+				<h:outputText id="helloSpringBeanRequestOutput" value="Output: #{helloSpringBeanRequest.output}" />
+			</p>
+			<p>
+				<h:outputText id="helloSpringBeanRequestCount" value="Count: #{helloSpringBeanRequest.count}" />
+			</p>
+		</div>
 
-        <div class="bean-block">
-            <h2>Spring Session</h2>
-            <h:outputText value="#{helloSpringBeanSession.message}" styleClass="message" />
-            <h:form>
-                <h:commandLink value="Next" action="#{helloSpringBeanSession.next()}" styleClass="link-button" />
-            </h:form>
-        </div>
+		<div class="bean-block">
+			<h2>Spring View</h2>
+			<h:form>
+				<h:outputLabel for="input" value="Type something: " />
+				<h:inputText id="input" value="#{helloSpringBeanView.input}" />
+				<h:commandButton value="Submit" action="#{helloSpringBeanView.submit}">
+					<f:ajax execute="@form" render="helloSpringBeanViewOutput helloSpringBeanViewCount" />
+				</h:commandButton>
+			</h:form>
+			<p>
+				<h:outputText id="helloSpringBeanViewOutput" value="Output: #{helloSpringBeanView.output}" />
+			</p>
+			<p>
+				<h:outputText id="helloSpringBeanViewCount" value="Count: #{helloSpringBeanView.count}" />
+			</p>
+		</div>
 
-        <div class="bean-block">
-            <h2>Spring Singleton</h2>
-            <h:outputText value="#{helloSpringBeanSingleton.message}" styleClass="message" />
-            <h:form>
-                <h:commandLink value="Next" action="#{helloSpringBeanSingleton.next()}" styleClass="link-button" />
-            </h:form>
-        </div>
+		<div class="bean-block">
+			<h2>Spring Session</h2>
+			<h:form>
+				<h:outputLabel for="input" value="Type something: " />
+				<h:inputText id="input" value="#{helloSpringBeanSession.input}" />
+				<h:commandButton value="Submit" action="#{helloSpringBeanSession.submit}">
+					<f:ajax execute="@form" render="helloSpringBeanSessionOutput helloSpringBeanSessionCount" />
+				</h:commandButton>
+			</h:form>
+			<p>
+				<h:outputText id="helloSpringBeanSessionOutput" value="Output: #{helloSpringBeanSession.output}" />
+			</p>
+			<p>
+				<h:outputText id="helloSpringBeanSessionCount" value="Count: #{helloSpringBeanSession.count}" />
+			</p>
+		</div>
 
-    </div>
+		<div class="bean-block">
+			<h2>Spring Singleton</h2>
+			<h:form>
+				<h:outputLabel for="input" value="Type something: " />
+				<h:inputText id="input" value="#{helloSpringBeanSingleton.input}" />
+				<h:commandButton value="Submit" action="#{helloSpringBeanSingleton.submit}">
+					<f:ajax execute="@form" render="helloSpringBeanSingletonOutput helloSpringBeanSingletonCount" />
+				</h:commandButton>
+			</h:form>
+			<p>
+				<h:outputText id="helloSpringBeanSingletonOutput" value="Output: #{helloSpringBeanSingleton.output}" />
+			</p>
+			<p>
+				<h:outputText id="helloSpringBeanSingletonCount" value="Count: #{helloSpringBeanSingleton.count}" />
+			</p>
+		</div>
+
+		<h:link outcome="digit" value="Next" />
+
+	</div>
 </h:body>
 </html>

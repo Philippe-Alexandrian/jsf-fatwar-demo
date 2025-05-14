@@ -6,24 +6,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloSpringBeanSingleton {
+public class HelloSpringBeanSingleton extends AbstractBean {
 
   private static final Logger logger = LoggerFactory.getLogger(HelloSpringBeanSingleton.class);
 
-  private Integer count = 0;
-
   @PostConstruct
   public void init() {
-    logger.debug("HelloSpringBeanSingleton@PostConstruct");
+    logger.debug("{}@PostConstruct", HelloSpringBeanSingleton.class.getSimpleName());
   }
 
   public String getMessage() {
-    count = count + 1;
-    return "HelloSpringBeanSingleton" + count;
-  }
-
-  public String next() {
-    return "digit";
+    return HelloSpringBeanSingleton.class.getSimpleName();
   }
 
 }

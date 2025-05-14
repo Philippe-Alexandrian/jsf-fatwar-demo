@@ -9,24 +9,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-public class HelloSpringBeanPrototype {
+public class HelloSpringBeanPrototype extends AbstractBean {
 
   private static final Logger logger = LoggerFactory.getLogger(HelloSpringBeanPrototype.class);
 
-  private Integer count = 0;
-
   @PostConstruct
   public void init() {
-    logger.debug("HelloSpringBeanPrototype@PostConstruct");
-  }
-
-  public String getMessage() {
-    count = count + 1;
-    return "HelloSpringBeanPrototype" + count;
-  }
-
-  public String next() {
-    return "digit";
+    logger.debug("{}@PostConstruct", HelloSpringBeanPrototype.class.getSimpleName());
   }
 
 }

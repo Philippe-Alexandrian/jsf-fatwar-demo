@@ -8,24 +8,13 @@ import org.springframework.web.context.annotation.SessionScope;
 
 @Component
 @SessionScope
-public class HelloSpringBeanSession {
+public class HelloSpringBeanSession extends AbstractBean {
 
   private static final Logger logger = LoggerFactory.getLogger(HelloSpringBeanSession.class);
 
-  private Integer count = 0;
-
   @PostConstruct
   public void init() {
-    logger.debug("HelloSpringBeanSession@PostConstruct");
-  }
-
-  public String getMessage() {
-    count = count + 1;
-    return "HelloSpringBeanSession" + count;
-  }
-
-  public String next() {
-    return "digit";
+    logger.debug("{}@PostConstruct", HelloSpringBeanSession.class.getSimpleName());
   }
 
 }
