@@ -8,24 +8,13 @@ import org.springframework.web.context.annotation.RequestScope;
 
 @Component
 @RequestScope
-public class HelloSpringBeanRequest {
+public class HelloSpringBeanRequest extends AbstractBean {
 
   private static final Logger logger = LoggerFactory.getLogger(HelloSpringBeanRequest.class);
 
-  private Integer count = 0;
-
   @PostConstruct
   public void init() {
-    logger.debug("HelloSpringBeanRequest@PostConstruct");
-  }
-
-  public String getMessage() {
-    count = count + 1;
-    return "HelloSpringBeanRequest" + count;
-  }
-
-  public String next() {
-    return "digit";
+    logger.debug("{}@PostConstruct", HelloSpringBeanRequest.class.getSimpleName());
   }
 
 }
