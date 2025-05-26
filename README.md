@@ -90,3 +90,9 @@ This project is released into the public domain. You are free to use, modify, an
 ## 🏷️ Keywords / Tags
 
 Java 17 • Spring Boot 3 • JSF 4 • Jakarta Faces 4 • CDI 4 • Servlet 6 • Tomcat 10.1 (embedded) • fat WAR
+
+## Links
+
+[Jakarta Faces with Spring Boot](https://qwertovsky.com/blog/posts/0003150_jakarta_faces_spring_boot_md) on qwertovsky's blog.
+
+And of course, [BalusC](https://balusc.omnifaces.org)'s blog.
